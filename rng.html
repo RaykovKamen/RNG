@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RNG</title>
+    <script src="./rng.js"></script>
+    <link rel="stylesheet" href="rng.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="container">
+        <label for="input">*Number:</label>
+        <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        <div class="left">
+            <label for="input">*From:</label>
+            <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        </div>
+        <div class="left">
+            <label for="input">*To:</label>
+            <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        </div>
+        <div class="clear">&nbsp;</div>
+        <label for="input">Throws:</label>
+        <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        <button>THROW IT</button>
+    </div>
+    <footer>
+        <label for="result">Chance:</label>
+        <input type="text" id="result" disabled readonly />
+        <label for="result">Total Lucky Throws:</label>
+        <input type="text" id="result" disabled readonly />
+        <ul id="list"></ul>
+    </footer>
+    <script>
+        solve();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNG</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="rng.css">
+    <script src="./rng.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <label for="input">*Number:</label>
+        <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        <div class="left">
+            <label for="input">*From:</label>
+            <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        </div>
+        <div class="left">
+            <label for="input">*To:</label>
+            <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        </div>
+        <div class="clear">&nbsp;</div>
+        <label for="input">Throws:</label>
+        <input type="number" id="input" min="0" oninput="validity.valid||(value='');" /><br>
+        <button>THROW IT</button>
+    </div>
+    <footer>
+        <label for="result">Chance:</label>
+        <input type="text" id="result" disabled readonly />
+        <label for="result">Total Lucky Throws:</label>
+        <input type="text" id="result" disabled readonly />
+        <ul id="list"></ul>
+    </footer>
+    <script>
+        solve();
+    </script>
+</body>
+
+</html>
